@@ -4,10 +4,15 @@ import Tasks from './components/Tasks';
 import {useState} from 'react'
 import Footer from './components/Footer';
 import AddTask from './components/AddTask';
+import {BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import Landing from './components/Landing';
+
+
+
 
 const App = () =>{
 
-  const[showAddTask, setShowAddTask] = useState(false)
+  const[showAddTask, setShowAddTask] = useState(true)
 
   const [tasks, setTasks] = useState([
     {
@@ -49,20 +54,45 @@ const addTask = (task) => {
 
 
   return(
-    
-    <div className='container'>
-      <Header onAdd={() => setShowAddTask(!showAddTask)}/>
+    <Router>
+    <div >
+      
+
+     <Route path='/' 
+     exact 
+     render={(props) =>(
+       <div>
+        
+         <Landing></Landing> 
+
+       </div>  
+     )}/> 
+
+
+      <Route path='/panel' 
+      exact
+      render={(props) => (
+        <div className='container'>
+            <Header onAdd={() => setShowAddTask(!showAddTask)}/>
       {showAddTask && <AddTask onAdd={addTask} />}
 
       {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask}/> : 'No hay actividades para realizar'}
+
+
+        </div>
+
+      )}/>
+
+      
       
       <Footer> </Footer>
 
     </div>
-   
+    </Router>
 
     
   )
+  
 }
 
 export default App

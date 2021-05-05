@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/auth.css';
 
 
-export const Register = () => {
+const Register = () => {
     return (
         <>
         <header>Granja Domotica</header>
@@ -59,3 +59,5 @@ export const Register = () => {
         </>
     )
 }
+
+export default Register

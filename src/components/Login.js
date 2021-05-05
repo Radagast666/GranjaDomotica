@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/index.css';
 
-export const Login = () => {
+const Login = () => {
     return (
         <>
         <header>Granja Domotica</header>
@@ -35,3 +35,5 @@ export const Login = () => {
         </>
     )
 }
+
+export default Login
