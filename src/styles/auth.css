@@ -25,7 +25,8 @@
 }
 
 .btn {
-    background-color: transparent;
+    background-color: cadetblue;
+
     border: none;
     color: white;
     cursor: pointer;
@@ -64,4 +65,27 @@ form {
 	padding: 90px;
 	height: 80%;
 	text-align: center;
+<<<<<<< HEAD
 }
+
+.cows{
+    background-image: url(https://64.media.tumblr.com/609976bb77e2566bb2bd2caf99adeedb/b164e0cb2e1c28ae-b2/s640x960/dd4770d028096cb2aa20eb5fce7cacdfc49ef2a5.jpg);
+    background-repeat: round;
+  
+
+    width: 640px;
+    height: 778px;
+
+}
+.form-control {
+    margin: 20px 0;
+  }
+
+  .form-control-check {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }  
+=======
+}
+>>>>>>> develop
