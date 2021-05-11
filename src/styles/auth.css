@@ -26,6 +26,7 @@
 
 .btn {
     background-color: cadetblue;
+
     border: none;
     color: white;
     cursor: pointer;
@@ -64,6 +65,7 @@ form {
 	padding: 90px;
 	height: 80%;
 	text-align: center;
+<<<<<<< HEAD
 }
 
 .cows{
@@ -84,3 +86,6 @@ form {
     align-items: center;
     justify-content: space-between;
   }  
+=======
+}
+>>>>>>> develop
