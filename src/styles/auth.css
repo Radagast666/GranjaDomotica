@@ -75,3 +75,12 @@ form {
     height: 778px;
 
 }
+.form-control {
+    margin: 20px 0;
+  }
+
+  .form-control-check {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }  

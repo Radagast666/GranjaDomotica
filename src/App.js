@@ -5,8 +5,9 @@ import {useState} from 'react'
 import Footer from './components/Footer';
 import AddTask from './components/AddTask';
 import {BrowserRouter as Router, Link, Route } from 'react-router-dom';
-import Landing from './components/Landing';
-
+import Login from './components/Login';
+import Register from './components/Register'
+import Button from './components/Button';
 
 
 
@@ -62,11 +63,65 @@ const addTask = (task) => {
      exact 
      render={(props) =>(
        <div>
-        
-         <Landing></Landing> 
+          <Link to="/login" className="btn"
+          > Iniciar sesión</Link>        
+
+          <Link to="/register" className="btn">Registrarse</Link>    
+            
+            
+            
+            
 
        </div>  
      )}/> 
+
+     <Route path='login'
+     exact
+     render={(props) => (
+      
+        <>
+        <header>Granja Domotica</header>
+            <div className="main">
+                <form >
+                    <h3 className="titulo">Login</h3>
+                        <input 
+                            type="text"
+                            placeholder="Usuario"
+                            name="user"
+                            className="input"
+                            autoComplete="off"
+                        />
+
+                        <input 
+                            type="password"
+                            placeholder="Password"
+                            name="password"
+                            className="input"
+                        />
+
+                        <div>
+                            <Link to="/panel" className="btn">Iniciar</Link>
+
+                        </div>
+
+
+                        
+                </form>
+                
+
+                
+
+        </div>
+       
+
+    
+
+     
+     
+        </>
+        
+
+     )}/>
 
 
       <Route path='/panel' 
@@ -78,6 +133,7 @@ const addTask = (task) => {
 
       {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask}/> : 'No hay actividades para realizar'}
 
+      <Footer> </Footer>
 
         </div>
 
@@ -85,8 +141,9 @@ const addTask = (task) => {
 
       
       
-      <Footer> </Footer>
-
+      <Route exact path="/login" component={Login}/>
+      <Route exact path="/register" component={Register}/>
+      
     </div>
     </Router>
 
