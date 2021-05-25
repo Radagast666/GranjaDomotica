@@ -10,8 +10,18 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.div{
+  text-align: center;
+  
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+}
+
 .container {
-  max-width: 500px;
+  max-width: 705px;
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
@@ -90,6 +100,15 @@ body {
   padding: 3px 7px;
   font-size: 17px;
 }
+.cows{
+  background-image: url(https://64.media.tumblr.com/609976bb77e2566bb2bd2caf99adeedb/b164e0cb2e1c28ae-b2/s640x960/dd4770d028096cb2aa20eb5fce7cacdfc49ef2a5.jpg);
+  background-repeat: round;
+  align-content: center;
+
+  width: 640px;
+  height: 778px;
+
+}
 
 .form-control-check {
   display: flex;
@@ -117,4 +136,12 @@ li {
 
 li:last-child {
   border-right: none;
+}
+.worms{
+  background-image: url('tumblr_b0ac8925e18d6da9748d173c6e6a3167_e2b671d8_1280.jpg');
+  background-repeat: round;
+  align-content: center;
+
+  width: 800px;
+  height: 500px;
 }

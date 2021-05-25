@@ -8,7 +8,7 @@ import "../styles/auth.css";
 
 export const Login = () => {
   const history = useHistory();
-  const formik = useFormik({
+  const formik = useFormik({  
     initialValues:{
       usuario: '',
       password: ''
@@ -33,7 +33,7 @@ export const Login = () => {
           });
           return;
         }
-        history.push('/inicio');
+        history.push('/panel');
       } catch (error) {
         console.error(error)
       }
@@ -73,3 +73,5 @@ export const Login = () => {
     </>
   );
 };
+
+export default Login

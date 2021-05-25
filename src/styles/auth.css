@@ -25,7 +25,7 @@
 }
 
 .btn {
-    background-color: cadetblue;
+    background-color: darkolivegreen;
 
     border: none;
     color: white;
@@ -37,12 +37,12 @@
 }
 
 .btn-primary {
-    background-color: #01A299;
+    background-color: darkolivegreen;
     border-radius: 2px;
 }
 
 .btn:hover{
-    background-color: lightseagreen;
+    background-color: mediumseagreen;
 }
 
 .btn-block {
@@ -65,7 +65,6 @@ form {
 	padding: 90px;
 	height: 80%;
 	text-align: center;
-<<<<<<< HEAD
 }
 
 .cows{
@@ -86,6 +85,4 @@ form {
     align-items: center;
     justify-content: space-between;
   }  
-=======
-}
->>>>>>> develop
+

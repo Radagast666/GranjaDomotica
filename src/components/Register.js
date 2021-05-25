@@ -3,9 +3,10 @@ import "../styles/auth.css";
 import  { clienteAxios } from "../config/axios";
 import { useFormik } from "formik";
 import Swal from "sweetalert2";
+import { useHistory } from "react-router";
 
 export const Register = () => {
-
+  let history = useHistory();
   const formik = useFormik({
     initialValues: {
       nombre: "",
@@ -17,6 +18,7 @@ export const Register = () => {
     },
     onSubmit: async usuario => {
       try {
+        
         const usuarioResponse = await clienteAxios.post('/usuarios/', usuario);
         if( usuarioResponse.data.id_usuario ){
           Swal.fire({
@@ -26,6 +28,7 @@ export const Register = () => {
           });
           formik.handleReset();
         }
+        history.push('/login');
       } catch (error) {
         console.error(error)
       }
@@ -107,3 +110,4 @@ export const Register = () => {
     </>
   );
 };
+export default Register

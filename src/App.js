@@ -4,16 +4,17 @@ import Tasks from './components/Tasks';
 import {useState} from 'react'
 import Footer from './components/Footer';
 import AddTask from './components/AddTask';
-import {BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Link, Route, NavLink } from 'react-router-dom';
 import Login from './components/Login';
 import Register from './components/Register'
-import Button from './components/Button';
-
+import LombriComposta from './components/LombriComposta';
+import Alimento from './components/Alimento';
+import Agua from './components/Agua';
 
 
 const App = () =>{
 
-  const[showAddTask, setShowAddTask] = useState(true)
+  const[showAddTask, setShowAddTask] = useState(false)
 
   const [tasks, setTasks] = useState([
     {
@@ -62,11 +63,15 @@ const addTask = (task) => {
      <Route path='/' 
      exact 
      render={(props) =>(
-       <div>
-          <Link to="/login" className="btn"
-          > Iniciar sesión</Link>        
 
-          <Link to="/register" className="btn">Registrarse</Link>    
+       <div>
+          <NavLink to="/login" class="btn">Iniciar sesión</NavLink> 
+
+          <NavLink to="/register" class="btn">Registrarse</NavLink>        
+          <div className="container">
+            <p className="cows"></p>
+          </div>
+          
             
             
             
@@ -127,8 +132,16 @@ const addTask = (task) => {
       <Route path='/panel' 
       exact
       render={(props) => (
+        
+        
+
+
         <div className='container'>
+
+
+
             <Header onAdd={() => setShowAddTask(!showAddTask)}/>
+            
       {showAddTask && <AddTask onAdd={addTask} />}
 
       {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask}/> : 'No hay actividades para realizar'}
@@ -143,7 +156,11 @@ const addTask = (task) => {
       
       <Route exact path="/login" component={Login}/>
       <Route exact path="/register" component={Register}/>
-      
+      <Route exact path="/composta" component={LombriComposta}/>
+      <Route exact path="/alimento" component={Alimento}/>
+      <Route exact path="/agua" component={Agua}/>
+
+
     </div>
     </Router>
 
